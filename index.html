@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js"></script>
+  <title>Explore Space and Plants</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #111;
+      color: #fff;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+
+    nav a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin-right: 20px;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 8px #00ffcc;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown select {
+      background-color: #111;
+      color: #00ffcc;
+      border: 2px solid #00ffcc;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .dropdown select:hover {
+      box-shadow: 0 0 10px #00ffcc;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.3);
+      text-align: center;
+      max-width: 600px;
+      z-index: 1;
+    }
+
+    h1 {
+      color: #00ffcc;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: #00ffcc;
+      color: #111;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #00cc99;
+      box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .container {
+        max-width: 90%;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a id="homeLink" href="index.html">Home</a>
+    <div class="nav-right">
+      <div class="dropdown">
+        <select id="pageSelect" onchange="redirectToPage()">
+          <option>walkthrogh</option>
+          <option value="vid.html">Space Video</option>
+          <option value="earth.html">Earth</option> 
+          <option value="satellite.html">Satellite</option>
+          <option value="Astronaut.html">Astronaut</option>
+          <option value="star.html">Stars Above</option>
+          <option value="feedback.html">Feedback & Insight</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Space Discoveries!</h1>
+    <p>Discover the wonders of space and the beauty of nature. Learn about our Space and explore how life on Earth thrives.</p>
+  </div>
+</body>
+</html>
